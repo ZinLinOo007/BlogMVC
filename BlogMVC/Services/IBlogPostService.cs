@@ -14,5 +14,7 @@ namespace BlogMVC.Services
         Task<BlogPost?> UpdateAsync(EditBlogPostRequest blogPostRequest);
 
         Task<BlogPost?> DeleteAsync(Guid id);
+
+        Task<BlogPost?> GetByUrlHandleAsync(string urlHandle);
     }
 }

@@ -13,5 +13,7 @@ namespace BlogMVC.Repositories
         Task<BlogPost?> UpdateAsynce(BlogPost blogPost);
 
         Task<BlogPost?> DeleteAsync(Guid id);
+
+        Task<BlogPost?> GetByUrlHandleAsync(string urlHandle);
     }
 }

@@ -53,6 +53,11 @@ namespace BlogMVC.Services
             return await _blogPostRepository.GetAsync(id);
         }
 
+        public async Task<BlogPost?> GetByUrlHandleAsync(string urlHandle)
+        {
+            return await _blogPostRepository.GetByUrlHandleAsync(urlHandle);
+        }
+
         public async Task<BlogPost?> UpdateAsync(EditBlogPostRequest blogPostRequest)
         {
 
