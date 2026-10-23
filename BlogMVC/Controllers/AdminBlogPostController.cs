@@ -3,11 +3,14 @@ using BlogMVC.Models.Domain;
 using BlogMVC.Models.ViewModels;
 using BlogMVC.Repositories;
 using BlogMVC.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace BlogMVC.Controllers
 {
+    [Authorize(Roles = "Admin")]
+
     public class AdminBlogPostController : Controller
     {
         private readonly ITagService _tagService;

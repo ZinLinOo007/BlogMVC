@@ -1,9 +1,12 @@
 ﻿using BlogMVC.Models.ViewModels;
 using BlogMVC.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogMVC.Controllers
 {
+    [Authorize(Roles = "Admin")]
+
     public class AdminTagsController : Controller
     {
         private readonly ITagService _tagService;
