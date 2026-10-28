@@ -26,8 +26,14 @@ builder.Services.Configure<IdentityOptions>(options =>
 builder.Services.AddScoped<ITagRepository, TagRepository>();
 builder.Services.AddScoped<IBlogPostRepository, BlogPostRepository>();
 builder.Services.AddScoped<IImageRepository,CloudinaryImageRepository>();
-builder.Services.AddScoped<ITagService,TagService>();
-builder.Services.AddScoped<IBlogPostService,BlogPostService>();
+builder.Services.AddScoped<IBlogPostLikeRepository, BlogPostLikeRepository>();
+builder.Services.AddScoped<IBlogPostCommentRepository, BlogPostCommentRepository>();
+
+builder.Services.AddScoped<ITagService, TagService>();
+builder.Services.AddScoped<IBlogPostService, BlogPostService>();
+builder.Services.AddScoped<IBlogPostLikeService, BlogPostLikeService>();
+builder.Services.AddScoped<IBlogPostCommentService, BlogPostCommentService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
